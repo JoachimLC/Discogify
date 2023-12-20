@@ -1,5 +1,310 @@
+/*background-image header source: https://www.pexels.com/nb-no/bilde/hoy-bla-himmel-farger-utendors-2948636/ */
+
 body {
-    font-family: "Arial", sans-serif;
-    font-size: 16px; /* You can adjust the font size as needed */
-    color: #333; /* You can set the font color as needed */
+    background-color: rgb(236, 220, 220);
+    font-family: Arial, Helvetica, sans-serif, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+}
+
+p {
+    color: white;
+}
+
+h1 {
+    color:white
+}
+
+h2 {
+    color:white
+}
+
+h3 {
+    color:white
+}
+
+h4 {
+    color:white
+}
+
+.grid-container {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-areas:"nav nav nav"
+                        "header header header"
+                        "main main main"
+                        "footer footer footer";
+    grid-template-rows: 0.2fr 1fr 1fr 0.2fr;              
+}
+  
+.grid-item-nav {
+    grid-area: nav;
+}
+
+.grid-item-header {
+    grid-area: header;
+}
+
+.grid-item-main {
+    grid-area: main;
+}
+
+.grid-item-footer {
+    grid-area: footer;
+}
+
+
+
+body div nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* ^ dette er for navigasjonslinje*/
+
+body div nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    
+}
+/* ^ dette er for menyen*/
+
+body div main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+/* ^ dette er for artiklene*/
+
+
+img {
+    height: 4rem;
+}
+/*logo størrelse*/
+
+
+header {
+    width: 100%;
+    
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/background.jpeg");
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 10px;
+    border-width: 2fr;
+}
+
+header div {
+    display: flex;
+    align-items: left;
+    justify-content: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-top: 50px;
+    max-width: 40rem;
+    margin-right: 70px;
+}
+
+article {
+    background-color: #5c88b1;
+    border-radius: 10px;
+    max-width: 25rem;
+    padding: 1.5rem;
+    margin-right: 1rem;
+    padding-bottom: 3rem;
+    box-shadow: 10px 10px #10465c;
+}
+
+
+
+body div footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*linker*/
+a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(109, 180, 228);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.button {
+    background-color: #44b1fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px #20577c;
+    width: 100%;
+}
+
+.buttonhere {
+    background-color: #014244;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px #1c4b69;
+    width: 100%;
+}
+
+.buttonhere:hover {
+    background-color: rgb(90, 128, 163);
+}
+
+.button:hover {
+    background-color: rgb(46, 107, 143);
+}
+
+article img{
+    max-width: 100%;
+    height:auto;
+    border-radius: 10px ;
+}
+
+
+footer {
+    background-color: rgb(92, 91, 91);
+    border-radius: 10px;
+    margin-top: 10rem;
+}
+
+#ham-icon{
+    display: none;
+}
+
+
+/*Jeg koder en del på ultra wide monitor, så denne breakpointen er for de som også bruker ultrawide så det ikke blir mye ubrukt plass og ting ikke blir så smått*/
+@media (min-width: 2000px) {
+        
+    body div main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    article {
+        background-color: #467ba7;
+        border-radius: 10px;
+        max-width: 40rem;
+        padding: 1.5rem;
+        margin-right: 1rem;
+        padding-bottom: 3rem;
+        box-shadow: 10px 10px #411728;
+    }
+}
+
+
+/*for små skjermer/mobil*/
+@media (max-width: 1000px) {
+    #ham-icon{
+        display: contents;
+    }
+    .grid-container {
+        display: grid;
+        grid-row-gap: 10px;
+        grid-template-areas:"nav"
+                            "header"
+                            "main"
+                            "footer";
+        grid-template-rows: 1fr;   
+    }
+
+    body {
+        font-size: 3rem;
+    }
+    
+    
+    article {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 3rem;
+    }
+
+    body div main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+    
+    header {
+        width: 99%;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.pexels.com/photos/2948636/pexels-photo-2948636.jpeg?cs=srgb&dl=pexels-mont-photographs-2948636.jpg&fm=jpg&w=1280&h=853);
+        background-size: cover;
+        background-position: center;
+        background-color: aquamarine;
+        border-radius: 10px;
+        padding-bottom: 5rem;
+    }
+    
+    body div nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: left;
+        gap: 2rem;
+
+    }
+
+
+    body div nav ul {
+        display: none;
+        flex-direction: row;
+        gap: 4rem;
+        flex-wrap: wrap;
+        margin-right: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a img {
+        height: 14rem;
+        margin-top: 3rem;
+    }
+
+    article {
+        max-width: 50rem;
+    }
+    
+    #main-menu{
+        padding-left: 3rem;
+        position: top;
+        top:125px;
+        left:0;
+        background-color: #2f2f2f;
+        width: 100%;
+        padding: 1rem;
+        align-items: center;    }
+    
+    #main-menu li{
+        list-style: none;
+        
+    }
+    
+    #main-menu a{
+        color: #fff;
+        padding: 1rem 0;
+        display: inline-block;
+        font-size: 5rem;
+    }
+
+
 }

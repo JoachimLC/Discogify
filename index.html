@@ -1,14 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Discogify</title>
 </head>
 
 <body>
-    <h1>Hello, World!</h1>
+    <!--facebook script for share knapp https://developers.facebook.com/docs/plugins/share-button/-->
+    <div id="fb-root"></div>
+   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="wAjduiti"></script>
+    <!--twitter script for tweet knapp https://developer.twitter.com/en/docs/twitter-for-websites/javascript-api/guides/set-up-twitter-for-websites-->
+   <script>window.twttr = (function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0],
+         t = window.twttr || {};
+       if (d.getElementById(id)) return t;
+       js = d.createElement(s);
+       js.id = id;
+       js.src = "https://platform.twitter.com/widgets.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     
+       t._e = [];
+       t.ready = function(f) {
+         t._e.push(f);
+       };
+     
+       return t;
+     }(document, "script", "twitter-wjs"));</script>
+
+   <div class="grid-container">
+       <nav class="grid-item-nav">
+           <a href="Forside.html"><img alt="Joachim Webdesign" src="img/vinyl-logo.png"></a>
+           <a href="javascript:void(0)" id="ham-icon" onclick="hamMenu()"><img src=hamburger.png alt="menu icon"><i></i></a>
+           <ul id="main-menu">
+               <li ><a class="buttonhere" href="Forside.html">Hjem</a></li>
+               <li ><a class="button" href="UUvsSEO.html">UU vs SEO</a></li>
+               <li><a class="button" href="CMS.html">CMS</a></li>
+               <li><a class="button" href="analyse.html"> Analyse</a></li>
+               <li><a class="button" href="kontakt.html">Kontakt Oss</a></li>
+           </ul>
+       </nav>
+       <header class="grid-item-header">
+           <div>
+               <section>
+                <h1>Welcome to Discogify</h1>
+                <p>Helping you find affordable vinyl records to your taste</p>
+                   <br>
+                   <br>
+                   <a class="button" href="kontakt.html">Kontakt oss</a>
+               </section>
+           </div>
+       </header>
+       <main class="grid-item-main">
+           <article>
+               <h2>UU vs SEO</h2>
+               <img alt="UU vs SEO" src="https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?cs=srgb&dl=pexels-pixabay-270637.jpg&fm=jpg&w=1280&h=850">
+               <!--source: https://www.pexels.com/nb-no/bilde/alfabet-design-forskning-gambling-270637/-->
+               <p> På denne siden er det en artikkel om UU og SEO og hvorfor dette er viktig.</p>
+               <br> 
+               <br> 
+               <a class="button" href="UUvsSEO.html">Les mer</a>
+           </article>
+
+           <article>
+               <h2>CMS</h2>
+               <img alt="CMS" src="https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?cs=srgb&dl=pexels-brett-sayles-3803517.jpg&fm=jpg&w=1280&h=852">
+               <!--source: https://www.pexels.com/nb-no/bilde/tilkobling-forbindelse-soknad-applikasjon-3803517/-->
+               <p>På denne siden er det en artikkel om ulike typer CMS og forskjellene mellom de.</p>
+               <br> 
+               <br> 
+               <a class="button" href="CMS.html">Les mer</a>
+           </article>
+
+           <article>
+               <h2>Analyse</h2>
+               <img alt="analyse" src="https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?cs=srgb&dl=pexels-lukas-590041.jpg&fm=jpg&w=1280&h=848">
+               <!--source: https://www.pexels.com/nb-no/bilde/bord-analyser-hvit-laken-590041/-->
+               <p>På denne siden er det en analyse av nettstedet opp imot tilgjengelighet.</p>
+               <br> 
+               <br> 
+               <a class="button" href="analyse.html">Les mer</a>
+           </article>
+           
+       </main>
+       <footer class="grid-item-footer">
+           <h3>Kontakt oss på <a href="emailaddresse@email.no">emailaddresse@email.no</a></h3>
+           <div class="fb-share-button" data-href="https://itstud.hiof.no/~joachilc/Nettsiden/Forside.html" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fitstud.hiof.no%2F%7Ejoachilc%2FNettsiden%2FForside.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+           <a class="twitter-share-button" href="https://twitter.com/intent/tweet"> Tweet</a>
+           <a href="https://www.pinterest.com/pin/create/button/" class="fa fa-pinterest"></a>
+
+           
+       </footer>
+   </div>
+   <script src="javascript/ham.js"></script>
 </body>
 
-</html>
+
+
+
+
